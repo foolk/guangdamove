@@ -1,0 +1,151 @@
+package com.guangdamove.www.controller;
+
+import com.guangdamove.www.entity.TClient;
+import com.guangdamove.www.entity.TClientLinkman;
+import com.guangdamove.www.mapper.TClientLinkmanMapper;
+import com.guangdamove.www.mapper.TClientMapper;
+import com.guangdamove.www.util.Power;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.web.bind.annotation.*;
+
+
+import java.util.List;
+
+/**
+ * @author Intian
+ * @create 2021-07-27 17:49
+ */
+@RestController
+@CrossOrigin
+public class ClientController {
+    @Autowired
+    private TClientMapper tClientMapper;
+
+
+    @Autowired
+    private TClientLinkmanMapper tClientLinkmanMapper;
+
+
+
+    /*
+    客户列表查询接口	GMIT	核心	客户管理	core003	queryGrpList
+    准客户列表查询接口	GMIT	核心	客户管理	core002	queryPreGrpList*/
+    @RequestMapping("queryPreGrpList")
+    public List<TClient> queryPreGrpList(int id){
+
+        return tClientMapper.tClientList(id);
+    }
+    /*客户详情查询接口	GMIT	核心	客户管理	core004	queryGrpInfo*/
+    @RequestMapping("queryPreGrpList1")
+    public Object queryPreGrpList1(Integer id){
+        return tClientMapper.tClientList1(id);
+    }
+
+    /*准客户删除*/
+    @RequestMapping(value = "deleteClient",method = RequestMethod.DELETE)
+    public Power deleteClient(Integer id){
+        tClientMapper.deleteByPrimaryKey(id);
+        tClientLinkmanMapper.deleteByCid(id);
+        return new Power("删除成功",true,1);
+    }
+    /*添加本地客户*/
+    @RequestMapping(value = "insertClient",method = RequestMethod.POST)
+    public Power insertClient(TClient tClient){
+        tClient.setStarLevel("3");
+        tClientMapper.insert(tClient);
+        Integer id = tClientMapper.tClientListByCname(tClient.getCname()).getId();
+        for (TClientLinkman clientLinkman : tClient.getTclientLinkmen()) {
+            clientLinkman.setCid(id);
+            clientLinkman.setFlag(1);
+            tClientLinkmanMapper.insert(clientLinkman);
+        }
+        return new Power("添加成功",true,id);
+    }
+
+    /*准客户维护接口	GMIT	核心	客户管理	core001	manaPreGrpInfo*/
+    /*修改客户*/
+    @RequestMapping(value = "updateClient",method = RequestMethod.POST)
+    public Power updateClient(TClient tClient){
+        System.out.println(tClient);
+        tClientMapper.updateByPrimaryKey(tClient);
+        int iid = 0;
+        for (TClientLinkman clientLinkman : tClient.getTclientLinkmen()) {
+            if(iid==0){
+                tClientLinkmanMapper.deleteByPrimaryKey(clientLinkman.getId());
+                iid = clientLinkman.getCid();
+            }
+            clientLinkman.setCid(iid);
+            tClientLinkmanMapper.insert(clientLinkman);
+        }
+        return new Power("修改成功",true,1);
+    }
+
+    /*搜索*/
+    @RequestMapping("seacher")
+    public Object seacherNamePhoneNumberIDCard(Power p){
+        if(p.getFlag().length()<11){
+            //客户名称
+            try{
+                if (Integer.parseInt(p.getFlag())>0){
+                    System.out.println(12);
+                    return tClientMapper.tClientListByPhone(p.getFlag());
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            System.out.println(1);
+            return tClientMapper.tClientListByName(p.getFlag());
+        }else if(p.getFlag().length()==11){
+            //手机号
+            System.out.println(2);
+            return tClientMapper.tClientListByPhone(p.getFlag());
+        }else{
+            //证件号码
+            System.out.println(3);
+            return tClientMapper.tClientListByIdCard(p.getFlag());
+        }
+    }
+
+    /*搜索*/
+    @RequestMapping("seacher2")
+    public Object seacherNamePhoneNumberIDCard2(Power p){
+        if(p.getFlag().length()<11){
+            //客户名称
+            try{
+                if (Integer.parseInt(p.getFlag())>0){
+                    System.out.println(12);
+                    return tClientMapper.tClientListByPhone2(p.getFlag());
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            System.out.println(1);
+            return tClientMapper.tClientListByName2(p.getFlag());
+        }else if(p.getFlag().length()==11){
+            //手机号
+            System.out.println(2);
+            return tClientMapper.tClientListByPhone2(p.getFlag());
+        }else{
+            //证件号码
+            System.out.println(3);
+            System.out.println(p.getFlag());
+            List<TClient> tClients = tClientMapper.tClientListByIdCard(p.getFlag());
+            for (TClient tClient : tClients) {
+                System.out.println(tClient);
+            }
+
+            return tClientMapper.tClientListByIdCard(p.getFlag());
+        }
+    }
+
+    /*删除一个联系人*/
+    @RequestMapping(value = "deleteClientLinkMan",method = RequestMethod.DELETE)
+    public Power deleteClientLinkMan(int id){
+        tClientLinkmanMapper.deleteByPrimaryKey(id);
+        return new Power("删除成功",true,1);
+    }
+
+
+
+}

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29849cea-b140-4f8c-a024-0b5a14dfdbde" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\maven\apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1vtQNkBbBy6t9TV2h4khOibswsy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/guangdamove/www/util" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java_WorkSpcae\guangdamove\src\main\java\com\guangdamove\www\util" />
+      <recent name="D:\Java_WorkSpcae\guangdamove\src\main\resources\static" />
+      <recent name="D:\Java_WorkSpcae\guangdamove\src\main\java\com\guangdamove\www\config" />
+      <recent name="D:\Java_WorkSpcae\guangdamove\src\main\java\com\guangdamove\www\controller" />
+      <recent name="D:\Java_WorkSpcae\guangdamove\src\main\java\com\guangdamove\www\entity" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value=" mav GuangdamoveApplication  clean" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuangdamoveApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="guangdamove" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.guangdamove.www.GuangdamoveApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\15346\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29849cea-b140-4f8c-a024-0b5a14dfdbde" name="Default Changelist" comment="" />
+      <created>1627378866628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627378866628</updated>
+      <workItem from="1627378869180" duration="14040000" />
+      <workItem from="1627444461254" duration="84386000" />
+      <workItem from="1627631382080" duration="2991000" />
+      <workItem from="1627690793863" duration="1222000" />
+      <workItem from="1627692729827" duration="9210000" />
+      <workItem from="1627872743933" duration="5644000" />
+      <workItem from="1627903713356" duration="352000" />
+      <workItem from="1627948057093" duration="2144000" />
+      <workItem from="1627966799222" duration="7958000" />
+      <workItem from="1627996492511" duration="576000" />
+      <workItem from="1627997194470" duration="579000" />
+      <workItem from="1628067566830" duration="210000" />
+      <workItem from="1628068023013" duration="7483000" />
+      <workItem from="1628147573372" duration="14296000" />
+      <workItem from="1628209636368" duration="1206000" />
+      <workItem from="1628237165677" duration="522000" />
+      <workItem from="1628237785164" duration="4595000" />
+      <workItem from="1628249011273" duration="1446000" />
+      <workItem from="1628250515517" duration="495000" />
+      <workItem from="1628251057142" duration="330000" />
+      <workItem from="1628251448015" duration="171000" />
+      <workItem from="1628251666346" duration="17000" />
+      <workItem from="1628251696205" duration="138000" />
+      <workItem from="1628251953877" duration="2277000" />
+      <workItem from="1628310071323" duration="927000" />
+      <workItem from="1628325072853" duration="773000" />
+      <workItem from="1628329559428" duration="686000" />
+      <workItem from="1628334098667" duration="1515000" />
+      <workItem from="1628335784982" duration="11464000" />
+      <workItem from="1628358240789" duration="426000" />
+      <workItem from="1628400614657" duration="847000" />
+      <workItem from="1628477561401" duration="8478000" />
+      <workItem from="1628491437661" duration="2143000" />
+      <workItem from="1628493728183" duration="619000" />
+      <workItem from="1628494594111" duration="11923000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1628122097630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628122097631</updated>
+    </task>
+    <task id="LOCAL-00002">
+      <created>1628148536433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628148536433</updated>
+    </task>
+    <task id="LOCAL-00003">
+      <created>1628148703550</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628148703550</updated>
+    </task>
+    <task id="LOCAL-00004">
+      <created>1628149280076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628149280076</updated>
+    </task>
+    <task id="LOCAL-00005">
+      <created>1628168619948</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628168619948</updated>
+    </task>
+    <task id="LOCAL-00006">
+      <created>1628248158005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628248158005</updated>
+    </task>
+    <task id="LOCAL-00007">
+      <created>1628250143358</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628250143358</updated>
+    </task>
+    <task id="LOCAL-00008">
+      <created>1628250479932</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628250479932</updated>
+    </task>
+    <task id="LOCAL-00009">
+      <created>1628250884449</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628250884449</updated>
+    </task>
+    <task id="LOCAL-00010">
+      <created>1628251530622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628251530622</updated>
+    </task>
+    <task id="LOCAL-00011">
+      <created>1628251820864</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628251820864</updated>
+    </task>
+    <task id="LOCAL-00012">
+      <created>1628254608091</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1628254608091</updated>
+    </task>
+    <task id="LOCAL-00013">
+      <created>1628254892608</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1628254892608</updated>
+    </task>
+    <task id="LOCAL-00014">
+      <created>1628310375248</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1628310375248</updated>
+    </task>
+    <task id="LOCAL-00015">
+      <created>1628310525310</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1628310525310</updated>
+    </task>
+    <task id="LOCAL-00016">
+      <created>1628310699160</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1628310699160</updated>
+    </task>
+    <task id="LOCAL-00017">
+      <created>1628479172479</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1628479172479</updated>
+    </task>
+    <task id="LOCAL-00018">
+      <created>1628493692123</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1628493692123</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>

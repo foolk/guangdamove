@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guangdamove.www.mapper.TClientMapper">
+  <resultMap id="BaseResultMap" type="com.guangdamove.www.entity.TClient">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cname" jdbcType="VARCHAR" property="cname" />
+    <result column="intention" jdbcType="VARCHAR" property="intention" />
+    <result column="code_type" jdbcType="VARCHAR" property="codeType" />
+    <result column="industry_type" jdbcType="VARCHAR" property="industryType" />
+    <result column="unit_type" jdbcType="VARCHAR" property="unitType" />
+    <result column="code_id" jdbcType="VARCHAR" property="codeId" />
+    <result column="unit_count" jdbcType="INTEGER" property="unitCount" />
+    <result column="insure_count" jdbcType="INTEGER" property="insureCount" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="star_level" jdbcType="VARCHAR" property="starLevel" />
+  </resultMap>
+
+
+
+  <resultMap id="BaseResultMap1" type="com.guangdamove.www.entity.TClient">
+    <id column="tid" jdbcType="INTEGER" property="id" />
+    <result column="cname" jdbcType="VARCHAR" property="cname" />
+    <result column="intention" jdbcType="VARCHAR" property="intention" />
+    <result column="code_type" jdbcType="VARCHAR" property="codeType" />
+    <result column="industry_type" jdbcType="VARCHAR" property="industryType" />
+    <result column="unit_type" jdbcType="VARCHAR" property="unitType" />
+    <result column="code_id" jdbcType="VARCHAR" property="codeId" />
+    <result column="unit_count" jdbcType="INTEGER" property="unitCount" />
+    <result column="insure_count" jdbcType="INTEGER" property="insureCount" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="star_level" jdbcType="VARCHAR" property="starLevel" />
+    <collection property="tclientLinkmen" ofType="com.guangdamove.www.entity.TClientLinkman">
+      <id column="id" jdbcType="INTEGER" property="id" />
+      <result column="cid" jdbcType="INTEGER" property="cid" />
+      <result column="lname" jdbcType="VARCHAR" property="lname" />
+      <result column="ltel" jdbcType="VARCHAR" property="ltel" />
+      <result column="office_phone" jdbcType="VARCHAR" property="officePhone" />
+      <result column="hiredate" jdbcType="DATE" property="hiredate" />
+      <result column="dept" jdbcType="VARCHAR" property="dept" />
+      <result column="job" jdbcType="VARCHAR" property="job" />
+      <result column="email" jdbcType="VARCHAR" property="email" />
+      <result column="flag" jdbcType="INTEGER" property="flag" />
+    </collection>
+  </resultMap>
+
+
+  <select id="tClientList" parameterType="int"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = #{id}
+  </select>
+  <select id="tClientList1" parameterType="int" resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.id = #{id} order by ts.flag desc
+  </select>
+  <!--客户名称-->
+  <select id="tClientListByName" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 3 AND t.cname like "%"#{thisis}"%"
+  </select>
+  <!--手机号-->
+  <select id="tClientListByPhone" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 3 AND ts.ltel like "%"#{thisis}"%"
+  </select>
+  <!--证件号-->
+  <select id="tClientListByIdCard" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 3 AND t.code_id like "%"#{thisis}"%"
+  </select>
+  <!--客户名称2-->
+  <select id="tClientListByName2" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 2 AND t.cname like "%"#{thisis}"%"
+  </select>
+  <!--手机号2-->
+  <select id="tClientListByPhone2" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 2 AND ts.ltel like "%"#{thisis}"%"
+  </select>
+  <!--证件号2-->
+  <select id="tClientListByIdCard2" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 2 AND t.code_id like "%"#{thisis}"%"
+  </select>
+  <!--查名字-->
+  <select id="tClientListByCname" parameterType="string"  resultMap="BaseResultMap1">
+    SELECT  t.id tid, t.cname, t.intention, t.code_type, t.industry_type, t.unit_type, t.code_id, t.unit_count, t.insure_count, t.address, t.star_level ,ts.* FROM t_client t left join t_client_linkman ts on t.id = ts.cid where t.star_level = 3 AND t.cname like "%"#{thisis}"%"
+  </select>
+
+
+  <sql id="Base_Column_List">
+    id, cname, intention, code_type, industry_type, unit_type, code_id, unit_count, insure_count, 
+    address, star_level
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_client
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_client
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.guangdamove.www.entity.TClient" useGeneratedKeys="true">
+    insert into t_client (cname, intention, code_type, 
+      industry_type, unit_type, code_id, 
+      unit_count, insure_count, address, 
+      star_level)
+    values (#{cname,jdbcType=VARCHAR}, #{intention,jdbcType=VARCHAR}, #{codeType,jdbcType=VARCHAR}, 
+      #{industryType,jdbcType=VARCHAR}, #{unitType,jdbcType=VARCHAR}, #{codeId,jdbcType=VARCHAR}, 
+      #{unitCount,jdbcType=INTEGER}, #{insureCount,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, 
+      #{starLevel,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.guangdamove.www.entity.TClient" useGeneratedKeys="true">
+    insert into t_client
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cname != null">
+        cname,
+      </if>
+      <if test="intention != null">
+        intention,
+      </if>
+      <if test="codeType != null">
+        code_type,
+      </if>
+      <if test="industryType != null">
+        industry_type,
+      </if>
+      <if test="unitType != null">
+        unit_type,
+      </if>
+      <if test="codeId != null">
+        code_id,
+      </if>
+      <if test="unitCount != null">
+        unit_count,
+      </if>
+      <if test="insureCount != null">
+        insure_count,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="starLevel != null">
+        star_level,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="cname != null">
+        #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="intention != null">
+        #{intention,jdbcType=VARCHAR},
+      </if>
+      <if test="codeType != null">
+        #{codeType,jdbcType=VARCHAR},
+      </if>
+      <if test="industryType != null">
+        #{industryType,jdbcType=VARCHAR},
+      </if>
+      <if test="unitType != null">
+        #{unitType,jdbcType=VARCHAR},
+      </if>
+      <if test="codeId != null">
+        #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="unitCount != null">
+        #{unitCount,jdbcType=INTEGER},
+      </if>
+      <if test="insureCount != null">
+        #{insureCount,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="starLevel != null">
+        #{starLevel,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.guangdamove.www.entity.TClient">
+    update t_client
+    <set>
+      <if test="cname != null">
+        cname = #{cname,jdbcType=VARCHAR},
+      </if>
+      <if test="intention != null">
+        intention = #{intention,jdbcType=VARCHAR},
+      </if>
+      <if test="codeType != null">
+        code_type = #{codeType,jdbcType=VARCHAR},
+      </if>
+      <if test="industryType != null">
+        industry_type = #{industryType,jdbcType=VARCHAR},
+      </if>
+      <if test="unitType != null">
+        unit_type = #{unitType,jdbcType=VARCHAR},
+      </if>
+      <if test="codeId != null">
+        code_id = #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="unitCount != null">
+        unit_count = #{unitCount,jdbcType=INTEGER},
+      </if>
+      <if test="insureCount != null">
+        insure_count = #{insureCount,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="starLevel != null">
+        star_level = #{starLevel,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.guangdamove.www.entity.TClient">
+    update t_client
+    set cname = #{cname,jdbcType=VARCHAR},
+      intention = #{intention,jdbcType=VARCHAR},
+      code_type = #{codeType,jdbcType=VARCHAR},
+      industry_type = #{industryType,jdbcType=VARCHAR},
+      unit_type = #{unitType,jdbcType=VARCHAR},
+      code_id = #{codeId,jdbcType=VARCHAR},
+      unit_count = #{unitCount,jdbcType=INTEGER},
+      insure_count = #{insureCount,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      star_level = #{starLevel,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
